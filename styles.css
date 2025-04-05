@@ -150,10 +150,9 @@ body {
   display: flex;
   min-height: 100vh;
 }
-
 .bg-illustration {
   flex: 1;
-  background: url('pregnant_illustration_lineart.png') no-repeat center;
+  background: url('hey-mom-clean.png') no-repeat center center/cover;
   background-size: cover;
   min-height: 100vh;
 }
