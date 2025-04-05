@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>My Preg Journey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage">
+  <h2>📷 My Pregnancy Journey</h2>
+  <input type="file" accept="image/*" multiple onchange="saveImages(event)" />
+  <div id="gallery" style="margin-top: 1rem;"></div>
+  <script>
+    function saveImages(e) {
+      const files = Array.from(e.target.files);
+      const urls = files.map(file => URL.createObjectURL(file));
+      const existing = JSON.parse(localStorage.getItem("pregImages") || "[]");
+      const all = existing.concat(urls);
+      localStorage.setItem("pregImages", JSON.stringify(all));
+      renderImages(all);
+    }
+    function renderImages(imgs) {
+      const div = document.getElementById("gallery");
+      div.innerHTML = imgs.map(src => `<img src="\${src}" style="max-width:100px; margin:5px;">`).join("");
+    }
+    window.onload = () => {
+      const imgs = JSON.parse(localStorage.getItem("pregImages") || "[]");
+      renderImages(imgs);
+    }
+  </script>
+</body>
+</html>

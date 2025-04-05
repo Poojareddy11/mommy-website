@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #dbeafe, #fefce8);
+}
+
+.main-layout {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background-color: #f0fdfa;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.illustration {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.illustration img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.features {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1rem;
+}
+
+.features h1 {
+  font-size: 2.2rem;
+  color: #1d4ed8;
+}
+
+.feature-card {
+  display: block;
+  background-color: #f0f9ff;
+  padding: 1rem;
+  border-radius: 999px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  background-color: #b1bec6;
+}
+
+.subpage {
+  background-color: #fff;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.welcome-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+
+.menu {
+  flex: 1;
+  min-width: 320px;
+  padding: 1rem;
+}
+
+.gradient-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ec4899, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  background-color: #f0f9ff;
+  padding: 1.2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #1f2937;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  background-color: #dbeafe;
+}
+
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.card:hover i {
+  transform: scale(1.2) rotate(10deg);
+}
+
+
+.bellybond {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #fdf6e3;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+.main-layout {
+  flex-direction: row;
+  gap: 2rem;
+}
+
+
+.new-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.bg-illustration {
+  flex: 1;
+  background: url('pregnant_illustration_lineart.png') no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.new-layout .menu {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Image</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="subpage">
+  <h2>🎨 Create Your Own Image</h2>
+  <form onsubmit="generateImage(event)">
+    <label>Which color do you like?<br><input name="color" required></label><br><br>
+    <label>Can we go for a walk?<br><input name="walk" required></label><br><br>
+    <label>Do you like sunsets?<br><input name="sunset" required></label><br><br>
+    <label>Do you like coffee?<br><input name="coffee" required></label><br><br>
+    <label>Do you like dogs?<br><input name="dog" required></label><br><br>
+    <label>What's your current mood?<br><input name="mood" required></label><br><br>
+    <button type="submit">Generate</button>
+  </form>
+  <div id="output" style="margin-top: 2rem; font-weight: bold;"></div>
+  <div id="image-preview" style="margin-top: 1rem; display: none;">
+    <img src="sample_pregnant_sunset.png" alt="Generated Art" style="max-width: 500px; width: 100%; border-radius: 1rem;" />
+  </div>
+  <script>
+    function generateImage(e) {
+      e.preventDefault();
+      const form = e.target;
+      const color = form.color.value;
+      const walk = form.walk.value;
+      const sunset = form.sunset.value;
+      const coffee = form.coffee.value;
+      const dog = form.dog.value;
+      const mood = form.mood.value;
+
+      document.getElementById('output').innerText =
+        `🖼️ Generating a cozy image with ${color}, walk: ${walk}, sunset: ${sunset}, coffee: ${coffee}, dog: ${dog}, mood: ${mood}...`;
+
+      document.getElementById('image-preview').style.display = "block";
+    }
+  </script>
+</body>
+</html>

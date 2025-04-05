@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage">
+  <h2>🆘 Emergency Consultation</h2>
+  <p>Please fill out the form below. We're with you 💕</p>
+  <iframe id="formFrame" src="https://docs.google.com/forms/d/e/1FAIpQLSeUViZlvD97s4rI-F4cJea2u-d8Wt8oTNp74Y1iXcYCC9vPVw/viewform?embedded=true"
+          width="100%" height="900" frameborder="0" onload="checkPopup()">Loading…</iframe>
+  <div id="thankYou" class="thank-you" style="display: none; font-size: 1.2rem; color: green;">✅ Thank you! A doctor will be with you soon. ❤️</div>
+  <script>
+    function checkPopup() {
+      const frame = document.getElementById("formFrame");
+      let src;
+      try { src = frame.contentWindow.location.href; } catch (e) { return; }
+      if (src.includes("formResponse")) {
+        document.getElementById("thankYou").style.display = "block";
+      }
+    }
+
+    setInterval(() => {
+      try {
+        const frame = document.getElementById("formFrame");
+        const src = frame.contentWindow.location.href;
+        if (src.includes("formResponse")) {
+          document.getElementById("thankYou").style.display = "block";
+          frame.style.display = "none";
+        }
+      } catch(e) {}
+    }, 2000);
+  </script>
+</body>
+</html>
