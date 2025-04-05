@@ -14,7 +14,9 @@
       align-items: center;
       justify-content: flex-end;
       font-family: 'Segoe UI', sans-serif;
+      padding: 1rem;
     }
+
     .content {
       background-color: rgba(255, 255, 255, 0.85);
       padding: 3rem;
@@ -23,38 +25,54 @@
       text-align: left;
       border-radius: 2rem;
     }
+
     .content h1 {
       font-size: 3.2rem;
-      color: #b45309;
+      font-weight: bold;
       margin-bottom: 1rem;
+      color: #a14e0a;
     }
+
     .content p {
-      font-size: 1.5rem;
-      color: #4b5563;
+      font-size: 1.2rem;
       margin-bottom: 2rem;
+      color: #333;
     }
-    .button {
-      background-color: #fbbf24;
+
+    .content button {
+      background-color: #ffc107;
       color: white;
-      padding: 1rem 2.5rem;
-      border-radius: 999px;
-      font-size: 1.3rem;
-      text-decoration: none;
-      transition: background-color 0.2s ease;
-      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 2rem;
+      cursor: pointer;
     }
-    .button:hover {
-      background-color: #f59e0b;
+
+    .content button:hover {
+      background-color: #e0a800;
     }
+
+    /* ✅ Responsive Styling for Mobile */
     @media (max-width: 768px) {
       body {
+        flex-direction: column;
         justify-content: center;
-        padding: 2rem;
-        background-position: top;
+        padding: 1rem;
       }
+
       .content {
-        margin: 0;
+        margin-right: 0;
+        max-width: 90%;
         text-align: center;
+      }
+
+      .content h1 {
+        font-size: 2.2rem;
+      }
+
+      .content p {
+        font-size: 1rem;
       }
     }
   </style>
@@ -63,7 +81,7 @@
   <div class="content">
     <h1>Hey Mom!</h1>
     <p>Your gentle companion for a healthy, happy pregnancy journey!</p>
-    <div style="text-align: center;"><a class="button" href="dashboard.html">✨ Explore</a></div>
+    <button>✨ Explore</button>
   </div>
 </body>
 </html>
