@@ -39,7 +39,7 @@
       color: #333;
     }
 
-    .content button {
+    .explore-button {
       background-color: #ffc107;
       color: white;
       padding: 0.8rem 1.5rem;
@@ -47,13 +47,16 @@
       border: none;
       border-radius: 2rem;
       cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s ease;
     }
 
-    .content button:hover {
+    .explore-button:hover {
       background-color: #e0a800;
     }
 
-    /* ✅ Responsive Styling for Mobile */
+    /* ✅ Mobile responsive styles */
     @media (max-width: 768px) {
       body {
         flex-direction: column;
@@ -81,7 +84,7 @@
   <div class="content">
     <h1>Hey Mom!</h1>
     <p>Your gentle companion for a healthy, happy pregnancy journey!</p>
-    <button>✨ Explore</button>
+    <a href="dashboard.html" class="explore-button">✨ Explore</a>
   </div>
 </body>
 </html>
